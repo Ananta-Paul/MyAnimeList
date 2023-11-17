@@ -137,9 +137,9 @@ const Login = () => {
     <Loading />
   ) : (
     <div className="flex h-screen items-center justify-center bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 ">
-      <div class="min-h-min min-w-min rounded-lg sm:rounded-xl">
-        <div class="group/card relative">
-          <div class="absolute -inset-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-25 blur transition duration-1000 group-hover/card:opacity-100 group-hover/card:duration-200"></div>
+      <div className="min-h-min min-w-min rounded-lg sm:rounded-xl">
+        <div className="group/card relative">
+          <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-25 blur transition duration-1000 group-hover/card:opacity-100 group-hover/card:duration-200"></div>
           <div className="relative z-10 flex flex-col items-center justify-around rounded-lg bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 p-3 text-center  dark:bg-gradient-to-b dark:from-gray-600 dark:to-gray-900 sm:rounded-xl">
             <Image
               alt="logo"
@@ -238,7 +238,7 @@ const Login = () => {
                 onClick={validCheak}
                 className="text-md group relative mb-2 mr-2 mt-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800"
               >
-                <span class="relative rounded-md bg-white px-4 py-[6px] transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
+                <span className="relative rounded-md bg-white px-4 py-[6px] transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
                   {loading ? (
                     <div className="text-center">
                       <div className="spinner-border" role="status">
@@ -257,10 +257,10 @@ const Login = () => {
             <button
               onClick={GoogleSign}
               type="button"
-              class=" dark:focus:ring-[#4285F4]/55 mb-2 mr-2 inline-flex items-center rounded-lg bg-[#4285F4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50"
+              className=" dark:focus:ring-[#4285F4]/55 mb-2 mr-2 inline-flex items-center rounded-lg bg-[#4285F4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50"
             >
               <svg
-                class="mr-2 h-4 w-4"
+                className="mr-2 h-4 w-4"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
