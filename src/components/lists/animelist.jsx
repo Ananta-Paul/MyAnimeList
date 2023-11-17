@@ -34,7 +34,7 @@ export const AnimeList = ({ animelist, heading, modlist }) => {
                   alt="animeImage"
                 />
               </AnimelistImageWraper>
-              <h4 className="text-md max-h-[18px] w-[150px] flex-nowrap overflow-hidden text-center font-medium leading-[1.1] text-gray-500 md:max-h-[36px] md:w-[220px]">
+              <h4 className="text-md max-h-[18px] w-[145px] flex-nowrap overflow-hidden text-center font-medium leading-[1.1] text-gray-500 md:max-h-[36px] md:w-[220px]">
                 {anime.title_english ? anime.title_english : anime.title}
               </h4>
               {heading !== "Recommended for you" && (

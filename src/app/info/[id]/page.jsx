@@ -30,7 +30,7 @@ const Page = async ({ params }) => {
   return (
     <>
       {/* <Print data={session} /> */}
-      <div className="flex flex-col flex-wrap items-center  justify-center gap-8 p-4 md:flex-row md:items-start md:justify-normal lg:flex-nowrap">
+      <div className="flex flex-col flex-wrap items-center  justify-center gap-2 p-4 sm:gap-8 md:flex-row md:items-start md:justify-normal lg:flex-nowrap">
         <Image
           className="object-cover "
           src={details?.data?.images.jpg.large_image_url}
@@ -39,13 +39,13 @@ const Page = async ({ params }) => {
           priority={true}
           alt="animeImage"
         />
-        <div className=" relative flex flex-col items-center gap-3 md:max-w-[calc(100vw-301px)] md:items-start">
+        <div className=" relative flex flex-col items-center gap-1 sm:gap-3 md:max-w-[calc(100vw-301px)] md:items-start">
           <h4 className=" text-2xl font-bold ">
             {details?.data?.title_english
               ? details?.data?.title_english
               : details?.data?.title}
           </h4>
-          <div className="flex flex-nowrap items-center gap-[2px] py-2 text-sm ">
+          <div className="flex flex-wrap items-center justify-center gap-[2px] py-2 text-sm sm:flex-nowrap ">
             <AiTwotoneStar className="text-base text-yellow-400" />
             <span className="pr-2 text-base">{details?.data?.score}</span>
             {rating && (

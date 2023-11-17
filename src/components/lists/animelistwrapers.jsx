@@ -21,22 +21,26 @@ const AnimelistContainerWraper = ({ children, heading, Id }) => {
   const handleHover = () => {
     setIsShowing(true);
     setIsOpen(true);
+    let l = 40;
+    if (window.innerWidth <= 768) l = 27.5;
     const container = containerRef.current;
     const leftWidth = container.offsetLeft;
     const rightWidth = window.innerWidth - leftWidth - container.offsetWidth;
-    if (leftWidth < 40) setLeft(leftWidth);
-    else if (rightWidth < 40) {
+    if (leftWidth < l) setLeft(leftWidth);
+    else if (rightWidth < l) {
       if (heading) {
         const container1 = document.getElementById(heading);
         if (
           container1 &&
-          container1.offsetWidth + container1.scrollLeft + 40 >=
+          container1.offsetWidth + container1.scrollLeft + l >=
             container1.scrollWidth
         )
-          setLeft(80);
-        else setLeft(40);
-      } else setLeft(Math.min(96 + -1 * rightWidth, 96));
-    } else setLeft(40);
+          setLeft(2 * l);
+        else setLeft(l);
+      } else {
+        setLeft(Math.min(2 * l + 8 + -1 * rightWidth, 8 + 2 * l));
+      }
+    } else setLeft(l);
     //console.log(leftWidth, rightWidth, 80 + -1 * rightWidth);
   };
   const handleLeave = () => {
@@ -67,7 +71,7 @@ const AnimelistContainerWraper = ({ children, heading, Id }) => {
     <div
       onClick={() => handleClick()}
       ref={containerRef}
-      className="group/hs1 relative flex h-[220px] min-w-[150px] flex-col md:h-[336px] md:min-w-[220px] "
+      className="group/hs1 relative flex h-[220px] min-w-[145px] flex-col md:h-[336px] md:min-w-[220px] "
     >
       <LeftContext.Provider value={{ isShowing, left, setLeft }}>
         {children}
