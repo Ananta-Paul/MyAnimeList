@@ -120,7 +120,7 @@ const Navbar = () => {
             width={40}
             alt="Logo"
           />
-          <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white sm:text-2xl">
+          <span className=" xsm:text-lg  self-center whitespace-nowrap text-base font-semibold dark:text-white sm:text-2xl">
             MyAnimeList
           </span>
         </a>
@@ -179,7 +179,7 @@ const Navbar = () => {
             aria-controls="navbar-search"
             onClick={toggleSearch}
             aria-expanded="false"
-            className="rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 sm:mr-3 md:hidden"
+            className="xsm:p-2.5 rounded-lg p-1.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 sm:mr-3 md:hidden"
           >
             <svg
               className="h-5 w-5"
