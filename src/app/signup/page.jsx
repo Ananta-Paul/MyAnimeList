@@ -31,9 +31,9 @@ const Login = () => {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/";
   // console.log(callbackUrl);
-  // useEffect(() => {
-  //   if (status === "authenticated") location.replace(callbackUrl);
-  // }, [status]);
+  useEffect(() => {
+    if (status === "authenticated") location.replace(callbackUrl);
+  }, [status]);
 
   const validCheak = () => {
     //setLoading(true);
