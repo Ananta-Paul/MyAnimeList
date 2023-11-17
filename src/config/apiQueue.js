@@ -17,7 +17,7 @@ const jikanQueue = new PQueue({
 
 export async function queueRequest(endpoint) {
   return jikanQueue.add(async () => {
-    console.log(endpoint);
+    // console.log(endpoint);
     return await fetch(endpoint).catch((error) => {});
   });
 }

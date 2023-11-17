@@ -89,7 +89,7 @@ const Navbar = () => {
   //   }
   // }, [theme]);
   useEffect(() => {
-    console.log("rerender");
+    //console.log("rerender");
     const handler = (e) => {
       if (!userRef.current?.contains(e.target)) setIsUserOpen(false);
       if (

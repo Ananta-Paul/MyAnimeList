@@ -2,7 +2,7 @@ import { queueRequest } from "./apiQueue";
 import { unstable_cache as cache } from "next/cache";
 // import "server-only";
 export const getMostPopularAPI = cache(async () => {
-  console.log("modtpop");
+  // console.log("modtpop");
   return await queueRequest(
     `https://api.jikan.moe/v4/top/anime?filter=bypopularity&order_by=popularity&limit=24`,
   ).then((res) => res?.json().then((results) => Promise.resolve(results)));

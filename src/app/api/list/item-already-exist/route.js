@@ -9,7 +9,7 @@ export async function GET(req) {
   try {
     await connectToDB();
     const token = await getToken({ req });
-    console.log("sess " + JSON.stringify(token));
+    //console.log("sess " + JSON.stringify(token));
     if (token) {
       //   const {} = new req();
       const id = searchParams.get("id");

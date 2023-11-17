@@ -13,7 +13,7 @@ const OptimisticList = ({ animelist }) => {
   };
   const router = useRouter();
   useEffect(() => {
-    console.log("/my_list");
+    //console.log("/my_list");
     //refResh("/my_list");
     router.refresh();
   }, []);

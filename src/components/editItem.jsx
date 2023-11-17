@@ -4,7 +4,7 @@ import { TiTick } from "react-icons/ti";
 import { MdEdit } from "react-icons/md";
 import { editItem } from "@/actions/serveractions";
 const EditItem = ({ anime }) => {
-  console.log(anime);
+  //console.log(anime);
   const [editable, setEditable] = useState(false);
   const [status, setStatus] = useState({
     status: anime?.ustatus,

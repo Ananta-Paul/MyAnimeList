@@ -30,10 +30,10 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/";
-  console.log(callbackUrl);
-  useEffect(() => {
-    if (status === "authenticated") location.replace(callbackUrl);
-  }, [status]);
+  // console.log(callbackUrl);
+  // useEffect(() => {
+  //   if (status === "authenticated") location.replace(callbackUrl);
+  // }, [status]);
 
   const validCheak = () => {
     //setLoading(true);
@@ -84,7 +84,7 @@ const Login = () => {
       setPassword("");
       setEmail("");
       setName("");
-      console.log("cU" + callbackUrl);
+      // console.log("cU" + callbackUrl);
       location.replace(callbackUrl);
     }
   }
@@ -95,7 +95,7 @@ const Login = () => {
         return;
       }
       const image = await getRandomCharacterAPI();
-      console.log(image);
+      // console.log(image);
       const res = await fetch("api/signup", {
         method: "POST",
         headers: {

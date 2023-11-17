@@ -7,7 +7,7 @@ import List from "@/models/listModel";
 import { revalidatePath } from "next/cache";
 //import { Animes } from "@/app/page";
 export const refResh = (path) => {
-  console.log(path);
+  //console.log(path);
   revalidatePath("/my_list");
 };
 export const getAllListItems = async () => {
