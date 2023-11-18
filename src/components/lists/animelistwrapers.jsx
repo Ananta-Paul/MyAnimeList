@@ -16,16 +16,22 @@ const AnimelistContainerWraper = ({ children, heading, Id }) => {
   const [left, setLeft] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
+
   const containerRef = useRef(null);
   const router = useRouter();
   const handleHover = () => {
     setIsShowing(true);
-    setIsOpen(true);
+    const isHoverableDevice = window.matchMedia(
+      "(hover: hover) and (pointer: fine)",
+    );
+    //console.log(isHoverableDevice.matches);
+    if (isHoverableDevice.matches) setIsOpen(true);
     let l = 40;
     if (window.innerWidth <= 768) l = 27.5;
     const container = containerRef.current;
     const leftWidth = container.offsetLeft;
     const rightWidth = window.innerWidth - leftWidth - container.offsetWidth;
+
     if (leftWidth < l) setLeft(leftWidth);
     else if (rightWidth < l) {
       if (heading) {
@@ -66,6 +72,7 @@ const AnimelistContainerWraper = ({ children, heading, Id }) => {
       return;
     }
     router.push(`/info/${Id}`);
+    setIsOpen(false);
   };
   return (
     <div

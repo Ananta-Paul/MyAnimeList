@@ -4,7 +4,7 @@ import VideoPlay from "./miniComponents/videoplay";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
       <Navbar />
       <VideoPlay />
       <main>{children}</main>
