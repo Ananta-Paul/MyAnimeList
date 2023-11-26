@@ -7,6 +7,22 @@ import { getMoreInfoAPI, formatCompactNumber } from "@/config";
 import { GiClapperboard } from "react-icons/gi";
 import { BiSolidUser } from "react-icons/bi";
 import { GetRecommendations } from "@/components/lists/horizontallist";
+export async function generateMetadata({ params, searchParams }, parent) {
+  const details = await getMoreInfoAPI(params.id);
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: details?.data?.title_english
+      ? details?.data?.title_english
+      : details?.data?.title,
+    description: details?.data?.synopsis,
+    openGraph: {
+      images: [details?.data?.images.jpg.large_image_url, ...previousImages],
+    },
+  };
+}
 
 const Page = async ({ params }) => {
   // const session = await getServerSession(authOptions);

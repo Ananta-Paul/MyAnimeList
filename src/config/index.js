@@ -147,12 +147,12 @@ export const getStaffAPI = async (id) => {
   );
 };
 
-export const getMoreInfoAPI = async (id) => {
+export const getMoreInfoAPI = cache(async (id) => {
   //console.log("info");
   return queueRequest(`https://api.jikan.moe/v4/anime/${id}/full`).then((res) =>
     res?.json().then((results) => Promise.resolve(results)),
   );
-};
+});
 export async function formatCompactNumber(number) {
   if (number < 1000) {
     return number;
