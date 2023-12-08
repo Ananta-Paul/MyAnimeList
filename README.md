@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## [MyAnimeList](https://my-anime-list-beta.vercel.app)
 
-## Getting Started
+It is a Next.js application that provides users with a comprehensive anime search and favorite management experience, now featuring MongoDB for user data storage and the Next.js App Router for dynamic navigation.
 
-First, run the development server:
+### Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+* **Seamless Search:** Search for anime by title or keywords.
+* **Detailed Information:** Explore anime details like synopsis, genre, rating, and more.
+* **Personalized Favorites:** Add and manage a personalized list of your favorite anime, now stored in MongoDB for persistence.
+* **User Authentication:** Securely login, register, and manage your account.
+* **Server-Side Rendering:** Enjoy improved performance and SEO.
+* **SEO Optimization:** Optimized meta tags and content for better search engine ranking.
+* **Responsive Design:** Works flawlessly across all devices.
+* **Dynamic Navigation:** Utilize the Next.js App Router for smooth and efficient navigation between different sections of the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Server-Side Actions
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* **Anime Data Fetching:** Efficiently retrieves anime data from an API.
+* **Favorites Management:** Add and remove anime from your favorites list, storing the information in MongoDB.
+* **User Authentication:** Handles user login, registration, and authentication, allowing access to personalized features.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Technologies Used
 
-## Learn More
+* **Next.js:** A popular React framework for building server-rendered applications.
+* **React:** A JavaScript library for building user interfaces.
+* **Tailwind CSS:** A utility-first CSS framework for rapid development.
+* **NextSeo:** An optimization library for managing SEO-related meta tags and content.
+* **Jikan API:** Efficiently retrieves anime data from a reliable and popular source.
+* **MongoDB:** A NoSQL database for storing and managing user data, including their favorite anime list.
+* **Next.js App Router:** A new feature in Next.js that provides dynamic and flexible routing within the application.
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository: `git clone https://github.com/Ananta-Paul/MyAnimeList`
+2. Install dependencies: `npm install`
+3. Configure MongoDB connection details:
+    * Create a MongoDB Atlas account and database.
+    * Update the `.env` file with your database connection details.
+4. Start the application: `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Contributing
 
-## Deploy on Vercel
+Feel free to contribute to this project by making pull requests. Please follow the contributing guidelines for code style and formatting.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Get Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Visit the application in your browser at ``http://localhost:3000``
+2. Explore the features and functionalities
+3. Search for your favorite anime
+4. Add them to your favorites list
+5. Register or login to experience the full features
+6. Utilize the dynamic navigation to seamlessly explore different sections of the application
+
+### License
+
+This project is licensed under the MIT License.
+
+We hope you enjoy using **MyAnimeList**!
