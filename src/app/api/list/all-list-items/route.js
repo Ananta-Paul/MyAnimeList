@@ -5,11 +5,8 @@ import { getToken } from "next-auth/jwt";
 import Anime from "@/models/animeModel";
 export const dynamic = "force-dynamic";
 
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+
 export async function GET(req) {
-  await delay(5000);
   try {
     await connectToDB();
     const token = await getToken({ req });
