@@ -3,7 +3,7 @@ import PQueue from "p-queue";
 const jikanQueue = new PQueue({
   concurrency: 1,
   intervalCap: 1,
-  interval: 1000,
+  interval: 3000,
 });
 
 // function getCurrentTime() {

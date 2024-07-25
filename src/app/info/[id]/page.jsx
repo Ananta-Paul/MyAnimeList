@@ -7,6 +7,26 @@ import { getMoreInfoAPI, formatCompactNumber } from "@/config";
 import { GiClapperboard } from "react-icons/gi";
 import { BiSolidUser } from "react-icons/bi";
 import { GetRecommendations } from "@/components/lists/horizontallist";
+// import {
+//   getMostPopularAPI,
+//   getTopAiringAPI,
+//   getTopUpcomingAPI,
+//   getSeasonAPI,
+// } from "@/config/index";
+// export async function getStaticPaths() {
+//   const a = await getMostPopularAPI();
+//   // const b = await getTopAiringAPI();
+//   // const c = await getTopUpcomingAPI();
+//   // const d = await getSeasonAPI();
+//   // , ...b?.data, ...c?.data, ...d?.data, ...b?.data, ...c?.data, ...d?.data
+//   const paths = a?.data.map((anime) => ({
+//     params: { id: anime?.mal_id.toString() },
+//   }));
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 export async function generateMetadata({ params, searchParams }, parent) {
   const details = await getMoreInfoAPI(params.id);
 

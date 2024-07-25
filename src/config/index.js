@@ -4,7 +4,7 @@ import { unstable_cache as cache } from "next/cache";
 export const getMostPopularAPI = cache(async () => {
   // console.log("modtpop");
   return await queueRequest(
-    `https://api.jikan.moe/v4/top/anime?filter=bypopularity&order_by=popularity&limit=24`,
+    `https://api.jikan.moe/v4/top/anime?filter=bypopularity&order_by=popularity&limit=25`,
   ).then((res) => res?.json().then((results) => Promise.resolve(results)));
 });
 export const getTopUpcomingAPI = cache(async () => {
